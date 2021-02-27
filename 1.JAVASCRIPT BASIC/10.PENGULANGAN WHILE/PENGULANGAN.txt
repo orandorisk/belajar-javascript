@@ -1,2 +1,16 @@
 //PENGULANGAN UNTUK MELAKUKAN SESUATU BERULANG KALI . INFINITE LOOPING TIDAK AKAN PERNAH BERAKHIR//
-//
+//UNTUK MENGHENTIKAN LOOPING DAPAT DILAKUKAN OLEH USER DENGAN CONTOH
+.. var ulang = true;
+   while(ulang) {
+	console.log('hello world');
+	ulang = confirm('lagi?');
+	}
+*VARIABEL ULANG DENGAN BOOLEAN TRUE DILAKUKAN PENGULANGAN DENGAN WHILE SELAMA NILAI BERNILAI TRUE, DAN DIBERIKAN PILIHAN DENGA CONFIMR
+
+//HAL LAIN DAPAT DIHENTIKAN OLEH PROGRAM DENGAN CONTOH
+.. nilai awal			|	var nilai_awal=1;
+   while(kondisi terminasi){	|	while(nilai_awal <=5){
+	AKSI			|		console.log('hello world');
+	increment / decrement	|		nilai_awal ++;
+	}			|		}
+*INCREMENT PENAMBAHAN DAN DECREMENT PENGURANGAN

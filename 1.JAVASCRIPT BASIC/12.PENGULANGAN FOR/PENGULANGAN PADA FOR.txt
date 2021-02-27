@@ -1,0 +1,36 @@
+//FOR CARA LAIN MELAKUKAN PENGULANGAN SELAIN MENGGUNAKAN WHILE.PADA FOR SYNTAX BAKU//
+..	for(var nilaiAwal = 1; nilaiAwal <= 10; nilaiAwal++)	{
+	console.log('hello world');
+	}
+
+//CHALLANGE DARI WPU
+  <!-- CARA KU -->
+    <!-- <script>
+        var jmlAngkot =10;
+        var angkotBeroperasi = 6;
+        var noAngkot = 1;
+
+        while(noAngkot <= angkotBeroperasi){
+            console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik');
+            noAngkot ++;
+        }
+        for(angkotBeroperasi=7; angkotBeroperasi <= jmlAngkot; angkotBeroperasi++){
+            console.log('Angkot No. ' + angkotBeroperasi + ' tidak beroperasi dengan baik');
+        }
+    </script> -->
+
+
+    <!-- CARA LAIN . PADA FOR DAPAT MENGGUNAKAN NO ANGKOT KARENA NILAI YANG MASUK ADALAH NILAI YANG SUDAH DI WHILE YAITU 7-->
+    <script>
+        var jmlAngkot =10;
+        var angkotBeroperasi = 6;
+        var noAngkot = 1;
+
+        while(noAngkot <= angkotBeroperasi){
+            console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik');
+            noAngkot ++;
+        }
+        for(noAngkot; noAngkot <= jmlAngkot; noAngkot++){
+            console.log('Angkot No. ' + noAngkot + ' tidak beroperasi dengan baik');
+        }
+    </script>

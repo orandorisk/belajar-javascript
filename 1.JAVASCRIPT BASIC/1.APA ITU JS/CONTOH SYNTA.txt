@@ -1,0 +1,3 @@
+//menampilkan console//
+allert ("hello world");
+//menampilkan js dapat di html di akhir sebelum </body>//atau dapat dengan file terpisah dengan <scritpt src="lokasi"></script>

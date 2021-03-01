@@ -1,0 +1,37 @@
+//PENGKONDISIAN DAN PERCABANGAN IF MENGGUNAKAN SYNTAX DASAR//
+..if (kondisi){
+	aksi		|	lakukan aksi jika kondisi di dalam kurung true
+	}
+	..		|	keluar dari blok jika kondisi bernilai false
+
+//CONTOH PENGGUNAAN IF DENGAN OPERATOR PERBANDINGAN
+..NILAI BENAR:
+	var angka = 1;
+	if (angka === 1) {
+	alert('alert ini berfungsi karena kondisi bernilai benar')
+	} 
+..NILAI SALAH
+	var angka = 2;
+	if (angka === 1) {
+	alert('alert ini tidak berfungsi karena kondisi bernilai salah')
+
+//CONTOH PENGGUNAAN IF DENGAN OPERATOR KURANG DARI	|	MODULUS
+..NILAI BENAR:						| ..NILAI BENAR:	
+	var angka = 2;					|	var angka = 2;
+	if (angka < 5) {				|	if(angka % 2 == 0)	{
+	alert(angka + 'lebih kecil dari 5')		|	alert(angka + 'adalah bilangan GENAP')
+	}						|	}
+
+
+//CONTOH PENGGUNAAN IF DAN ELSE//
+        var jmlAngkot = 10;
+        var angkotBeroperasi = 6;
+        var noAngkot = 1;
+        for(noAngkot; noAngkot <=jmlAngkot;noAngkot++){
+            if (noAngkot <=angkotBeroperasi) {
+                console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik');                
+            }
+            else{
+                console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi');
+            }
+         }

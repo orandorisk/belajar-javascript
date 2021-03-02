@@ -1,0 +1,17 @@
+//SEBELUMNYA MENGGUNAKAN LOOPING WHILE DAN FOR SEKARANG MENGGUNAKAN ELSE IF. DAN ELSE IF INI DIGUNAKAN UNTUK MENGATASI JIKA ADA INPUTAN YANG SELAIN ANGKA SEPERTI HURUF//
+..SYNTAX BAKU PENGKONDISIAN IF ELSE:
+if(kondisi){		|	var angka = prompt('masukan angka genap atau ganjil')	|	KONDISI DAPAT DIISI KURANG DARI ATAU LEBIH DARI, DIISI KURANG SAMA DENGAN ATAU LEBIH SAMA DENGAN, ATAU OPERATOR LOGIKA DAN && ATAU || SELAIN ITU ADA JUGA OPERATOR ARITMATIKA MODULUS % INTINYA DAPAT DIISI OPERATOR
+	aksi 1		|	if(angka % 2 == 0){
+} else {		|	 alert('angka yang anda masukan bilangan genap');}
+	aksi 2		|	else{alert('angka yang anda masukan bilangan ganjil');}
+}
+
+..SYNTAX BAKU PENGKONDISIAN ELSE IF:
+if(kondisi){		|	var angka = prompt('masukan angka');
+	aksi 1		|	if (angka % 2 == 0) {
+}else if{		|		 alert('Nilai yang anda masukan angka genpa');
+	aksi 2		|	}else if(angka % 2 == 1){
+}else{			|		alert('nilai yang anda masukan angka ganjil');
+	aksi 3		|	}else{
+}			|	 	 alert('nilai yang anda masukan bukan angka');
+			|	}

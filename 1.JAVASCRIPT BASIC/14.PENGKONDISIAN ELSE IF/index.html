@@ -32,18 +32,31 @@
         // }
 
         // KASUS ANGKOT SANDHIKA GALIH JAWABAN ORANG LAIN
-        for(i =1; i <= 10; i++){
-        if(i <= 6){
-         console.log(`Angkot No. ${i} sedang beroperasi`);
-        }
-        else if (i === 8){
-         console.log(`Angkot No. ${i} sedang lembur`)
-        }
+        // for(i =1; i <= 10; i++){
+        // if(i <= 6){
+        //  console.log(`Angkot No. ${i} sedang beroperasi`);
+        // }
+        // else if (i === 8){
+        //  console.log(`Angkot No. ${i} sedang lembur`)
+        // }
 
-        else{
-        console.log(`Angkot No. ${i} sedang tidak beroperasi`)
+        // else{
+        // console.log(`Angkot No. ${i} sedang tidak beroperasi`)
+        // }
+        // }
+
+        // KASUS ANGKOT SANDHIKA GALIH VERSI PAK SANDHIKA
+        var jmlAngkot = 10;
+        var angkotBeroperasi = 6;
+        for(var noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++){
+            if(noAngkot <= 6){
+                console.log('Angkot No.'+ noAngkot +' beroperasi dengan baik');
+            }else if(noAngkot === 8){
+                console.log('Angkot No. '+ noAngkot +' sedang lembur');
+            }else{
+                console.log('Angkot No. ' + noAngkot +' sedang tidak beroperasi');
+            }
         }
-    }
     </script>
 </head>
 <body>

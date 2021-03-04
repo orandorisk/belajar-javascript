@@ -1,0 +1,83 @@
+*SWITCH DIGUNAKAN SAAT KAMU MEMILIKI KASUS ELSE IF LEBIH DARI 3 DAN SWITCH INILAH YANG DAPAT KAMU PAKAI
+*INGAT SELALU SAAT MENGGUNAKAN IF ELSE-IF ATAU SWITCH BAGIAN TIPE DATANYA STRING'' ATAU INTEGER
+//SWITCH ADALAH PENGKONDISIAN TERAKHIR SETELAH IF DAN ELSE IF// SWITCH TIDAK MEMILIKI KONDISI YANG BANYAK DAN MENGGUNAKAN EKSPRESI BUKAN KONDISI, BERBEDA DENGAN ELSE IF YANG DAPAT MEMILIKI KONDISI YANG BANYAK
+..SYNTAX SWITCH:
+	switch(ekspresi) {		|	EKSPRESI MENGHASILKAN SEBUAH NILAI
+		case "nilai 1":		|	DI CEK BERUPA KASUS DILIHAT DULU EKSPRESINYA JIKA BERNILAI 1 MAKA PADA CASE INI AKAN MENJALANKAN AKSI
+		aksi 1	
+		[break;]		|	KEYWORD BREAK OPTIONAL AGAR SETELAH SELESAI MENJALANKAN AKSI DAPAT KELUAR DARI SWITCH
+		case "nilai 2":
+		aksi 2
+		[break;]
+		case "nilai n":
+		aksi n
+		[break;]
+		default:		|	DEFAULT DIJALANKAN JIKA PADA CASE DIATAS TIDAK MEMENUHI EKSPRESINYA
+		aksi default
+		[break;]
+		}
+//PADA IF DAN ELSE == DIGUNAKAN UNTUK OPERATOR PERBANDINGAN.SEDANGKAN === OPERATOR IDENTITAS YANG DIBANDINGAKAN BUKAN NILAI SAJA TAPI JUGA IDENTITAS
+MENGGUNAKAN PROMPT YANG APAPUN YG DIINPUTKAN AKAN MENJADI 'STRING' (PADA SEBELUM-SEBELUMNYA KITA MENGGUNAAKN EKSPRESI PEMBAGIAN MENGGUNAKAN MODULUS %) SEDANGKAN YANG KITA BANDINGKAN ADALAH INTEGER/ANGKA. SOLUSINYA DAPAT DIBANDINGKAN DENGAN SAMA DENGAN NYA ADA 2 BISA DIINPUTKAN NILAI STRING ATAU INTEGER. ATAU MENGGUNAKAN SAMA DENGAN ADA 3 DAN YANG DIBANDINGKAN ADALAH NILAI STRING''.
+//NAMUN DISINI INGIN TETAP MENGGUNAKAN SAMA DENGAN ADA 3 DAN YANG DIBANDINGKAN TETAP NILAI INTEGER KITA DAPAT MENAMBAHKAN PADA VAR ANGKA = PARSEINT(PROMPT('MENAMBAHKAN')); DENGAN INI DAPAT DIINPUTKAN INTEGER ATAU STRING
+..PERBANDINGAN === NILAI INT					|..PERBANDINGAN == NILAI STRING / CARA SIMPLE 
+	var angka = perseint(prompt('masukan angka :'));	|	var angka = prompt('masukan angka :');	
+	if( angka === 1 ) {					|	if( angka == 1 ) {
+		alert('anda memasukan angka 1');		|		alert('anda memasukan angka 1');
+	} else if( angka === 2 ) {				|	} else if( angka == 2 ) {	
+		alert('anda memasukan angka 2');		|		alert('anda memasukan angka 2');
+	} else if( angka === 3 ) {				|	} else if( angka == 3 ) {
+		alert('anda memasukan angka 3');		|		alert('anda memasukan angka 3');
+	} else {						|	} else {
+		alert('angka yang anda masukan salah:');	|		alert('angka yang anda masukan salah:');
+	}							|	}	
+
+//DAN PADA SWITCH
+..var angka = prompt('masukkan angka:');
+	switch( angka ) {					|	DIDALAM KURUNG ADALAH EKSPRESI DARI VARIABEL
+		case '1':					|	CASE HARUS MENGGUNAKAN TIPE DATA STRING KARENA PROMPT ADALAH STRING. KONDISI TIDAK DAPAT DIISI DENGAN angka > nilai INI TIDAK BISA
+			alert('anda memasukan angka 1');
+		break;
+		case '2':
+			alert('anda memasukan angka 2');
+		break;
+		case '3':
+			alert('anda memasukan angka 3');
+		break;
+		default:
+			alert('anda memasukan salah');
+		break;
+		}
+
+..DENGAN BREAK
+..var item = prompt('silahkan memasukan makanan / minuman. daging, susu, roti, humberger softdrikn');
+	switch( item ) {
+		case 'daging':
+			alert('ini adalah makanan/minuman sehat');
+		break;
+		case 'susu':
+			alert('ini adalah makana/minuman sehat');
+		break;
+		case 'roti':
+			alert('ini adalah makanan/minuman sehat');
+		break;
+		case 'humberger':
+			alert('ini adalah makanan/minuman tidak sehat');
+		break;
+		case 'softdrink':
+			alert('ini adalah makanan/minuman tidak sehat');
+		break;
+		}
+
+..TANPA BREAK ADALAH JIKA YANG INGIN DITAMPILKAN ALERTNYA SMA TULISANNYA
+..var item = prompt('silahkan memasukan makanan / minuman. daging, susu, roti, humberger softdrikn');
+	switch( item ) {
+		case 'daging':
+		case 'susu':
+		case 'roti':
+			alert('ini adalah makanan/minuman sehat');
+		break;
+		case 'humberger':
+		case 'softdrink':
+			alert('ini adalah makanan/minuman tidak sehat');
+		break;
+		}

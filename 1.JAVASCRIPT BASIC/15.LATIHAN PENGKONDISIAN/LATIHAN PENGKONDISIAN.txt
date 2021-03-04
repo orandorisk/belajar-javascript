@@ -1,0 +1,11 @@
+//MENGGUNAKAN OPERATOR LOGIKA && || ! KHUSUS UNTUK || DAPAT DIGUNAKAN LEBIH DARI 2 KALI// PENGGUNAAN OPERATOR INI DIKOMBINAASIKAN DENGAN OPERATOR PERBANDINGAN == KURANG DARI ATAU LEBIH DARI
+for(noAngkot = 1; noAngkot <= 10; noAngkot++){
+            if(noAngkot<6 && noAngkot != 5){					|	&& DIGUNAKAN DALAM FUNGSI KURANG DARI 6 DAN YANG 5 TIDAK DIMASUKAN. PENGGUNAAN OPERASI && DIGUNAKAN HARUS BERNILAI TRUE UNTUK KEDUA DUANYA AGAR SELURUH KONDISINYA TRUE DAN DAPAT DIKERJAKAN/LIHAT TABEL KEBENARAN
+                console.log('Angkot No. '+noAngkot+' beroperasi dengan baik');
+            }else if(noAngkot == 8 || noAngkot == 10 || noAngkot == 5){		|	|| DAPAT DIGUNAKAN LEBIH DARI SATU KALI UNTUK OPERATOR YANG DIKOMBINASIKAN DENGAN OPERATOR PERBANDINGAN
+                console.log('Angkot No. '+noAngkot+' sedang lembur');
+            }else{
+                console.log('Angkot No. '+noAngkot+' sedang tidak beroperasi');
+            }
+
+        }

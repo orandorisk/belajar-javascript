@@ -1,0 +1,44 @@
+//FUNCTION KUNCI UTAMA DALAM JS. ADALAH SUB PROGRAM YG DAPAT DIPANGGIL PADA BAGIAN LAIN DALAM PROGRAMNYA//
+//MERUPAKAN STRUKTUR DASAR DALAM JAVASCRIPT. KUMPULAN STATEMENT UNTUK MENGHITUNG NILAI. UNTUK MENGGUNAKANNYA KITA HARUS MEMBUAT TERLEBIH DAHULU FUNCTION TERSEBUT. TERMASUK KE DALAM FIRST CLASS OBYECT//
+//FUNCTION DAPAT DIGUNAKAN KEMBALI REUSABILITY(DRY:DO NOT REPEAT YOURSELF). DAPAT DEKOMPOSISI / ABSTRAKSI. MODULARITAS.
+//KATEGORI FUNCTION :
+~BUILT IN FUNCTION(FUNGSI YG SUDAH DISEDIAKAN OLEH JS DAN KITA TINGGAK MEMAKAINYA SAJA CONTOH ALERT CONFIRM PROMPT
+ STRING ..charAt(), slice(), split(), toString(), toLowerCase(), toUpperCase(), ...
+	..charAt untuk mengetahui ada karakter apa di dalam sebuah string 
+	
+ MATH   ..sin(), cos(), tan(), random(), round(), floor(), ceil(), log() ...
+	..random()membangkitkan bilangan random
+ 
+ DAN MASIH BANYAK LAGI JIKA INGIN MELIHAT REFERENSI DAPAT DILIHAT DI https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+~USER-DEFINED FUNCTION(FUNGSI YANG DIBUAT OLEH KITA SENDIRI)
+ + menggunakan keyword function
+ + nama function (optional)
+ + parameter / argument bahan baku sebuah function:
+	= disimpan di dalam ()
+	= boleh ada atu tidak , jika ada boleh lebih dari satu
+	= jika lebih dari satu pisahkan dengan tanda koma,
+ + function body, 'dibungkus' dengan {}
+ + dapat mengembalikan nilai(return value) atau tidak.
+~MEMBUAT USER-DEFINED FUNCTION:
+ +	DENGAN DEKLARASI/FUNCTION DECLARATION (SCREENSHOOT) :
+	CONTOH	:	
+			function jumlahDuaBilangan(a, b) {	|	FUNGSI UNTUK MENGHITUNG 2 BUAH BILANGAN "MENGGUNGAKAN KEYWORD (FUNCTION) NAMA FUNCTION(JUMLAHDUABILANGAN) DAN PARAMETER (A, B) UTK DIGUNAKAN NANTI DI DALAM BODY FUNCTION
+				var total;			|	DI DALAM BODY{} TEMPAT MENYIMPAN VARIABEL (VAR TOTAL) 
+				total = a + b;			|	DI ISI A TAMBAH B
+								|
+				return total;			|	PENGEMBALIAN
+			}
+ 
+ +	DENGAN EKSPRESI /FUNCTION EXPRETION   (SCREENSHOOT) :
+	CONTOH	:
+			var jumlahDuaBilangan = function (a, b) {	|	FUNCTION DISIMPAN DIDALAM SEBUAH VARIABEL (VAR JUMLAHDUA) DAN FUNCTION TANPA DIBERIKAN NAMA LANGSUNG MEMBUAT KURUNG BUKA KURUNG TUTUP (FUNCTION (A, B))
+				var total;				|	DI DALAM BODY{} TEMPAT MENYIMPAN VARIABEL
+				total = a + b;				|	*PARAMETER (A, B) BOLEH ADA ATAU TIDAK KALAUPUN TIDAK ADA TETAP HARUS DIBERIKAN TANDA () SETELAH FUNCTION. SELAIN ITU NILAI RETURN BOLEH ADA ATAU TIDAK
+				return total;				|
+~MEMANGGIL FUNCTION:
+	DI DALAM ALERT:
+		+alert(jumlahDuaBilangan(1,2));
+		+alert(jumlahDuaBilangan(25,30));
+		+alert(jumlahDuaBilangan(1500,17.5));
+	*JIKA MEMBUTUHKAN SEBUAH PARAMETER BISA DIMASUKAN PARAMETER NILAINYA BERAPA

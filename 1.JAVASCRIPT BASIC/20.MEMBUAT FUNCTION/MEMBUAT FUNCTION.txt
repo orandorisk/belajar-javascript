@@ -3,4 +3,20 @@
 //FUNCTION ADALAH SEBUAH BLOK KODE MELAKUKAN TUGAS SPESIFIK
 //BLOK KODE DAPAT DIPANGGIL BERULANG ULANG DAN MEMUDAHKAN PENELUSURAN DAN REUSABILITY
 
-~
+~ALGORITMA MENGHITUNG 2 BUAH KUBUS DENGAN UKURAN BERBEDA MENGGUNAKAN URUTAN FUNCTION
+	1.KETAHUI SISI MASING" KUBUS	8	3
+	2.HITUNG VOLUME MASING" KUBUS	8PANGKAT3=512	3PANGKAT3=27
+	3.JUMLAHKAN HASILNYA		512 + 27
+	4.KEMBALIKAN NILAI JAWABAN	539
+~CARA MEMBUAT FUNCTION
+	function jumlahVolumeDuaKubus () {				|	function UNTUK MEMBERITAHU JAVASCRIPT INTERPRETER YANG AKAN KITA AKAN MEMULAI SEBUAH FUNGSI	|	jumlahVolumeDua (menjelaskan apa yg akan dilakukan	|	()KURUNG ADALAH TEMPAT MENYIMPAN BAHAN BAKU YANG AKAN DIPAKAI DI DALAM FUNCTION		|	a, b DATA YANG DIKIRIM DARI LUAR SAAT PEMANGGILAN FUNCTION 
+	  +Ketahui Sisi Masing' Kubus (letakan di parameter)		|	
+	  +Hitung Volume Masing'kubus (letakan di dalam Body)		|	var total, volumeA, volumeB;
+	  +Jumlahkan hasilnya	      (letakan di dalam Body)		|	volumeA = a * a * a;
+	  								|	volumeB = b * b * b;
+									|	total   = volumeA + volumeB;
+	  +Kembalikan Nilai Jawabannya(letakan di bagian Return)	|	return total;
+	}
+~CARA MEMANGGIL FUNCTION (SETELAH DIBUAT DI ATAS FUNCTION DAPAT DIGUNAKAN DENGAN CARA DIPANGGIL DENGAN SYNTAX
+	+	alert(jumlahVolumeDuaKubus(9,2));
+	+	console.log(jumlahVolumeDuaKubus(29,44));								

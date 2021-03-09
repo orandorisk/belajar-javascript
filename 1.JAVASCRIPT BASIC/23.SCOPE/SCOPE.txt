@@ -1,0 +1,44 @@
+//SCOPE BAGAIMANA SEBUAH VARIABLE DAPAT DIAKSES DALAM PROGRAM KITA//ADA 2 JENIS SCOPE
+//BLOCK SCOPE(DIGUNAKAN DI DALAM BAHASA C DAN JAVA) 					|	DAN FUNCTION SCOPE (SYNTAX PADA C DAN JAVA DI KIRI AKAN BERFUNGSI DI DALAM JAVASCRIPT KARENA JS TIDAK MENGANUT FUNGI BLOK SCOPE DAN MENGANUT FUNGIS FUNCTION SCOPE
+  CONTOH : 										|	CONTOH :
+	int i = 2;									|		int i = 2;			|	int a = 4;
+	if(i % 2 == 0) {								|		if ( i % 2 == 0) {		|	function(){
+		bool genap = true;							|			bool hasil == true;	|	var b = 6;
+	}										|		}				|	console.log(b atau a);		|	INI SEMUA DAPAT DIAKSES 
+	if( genap) {									|		if ( hasil ) {			|	}
+		printf("genap");							|			console.log("keluar");	|	console.log(b);			|	ARGUMEN B TIDAK DAPAT DIAKSES
+	}										|		}
+	*hasilnya akan undifined karena ada block scope di dalam if yang atas		|	*PADA FUNCTION SCOPE SEBUAH VARIABEL YANG TERLETAK DI DALAM FUNCTION SCOPE TIDAK DAPAT DIPANGGIL OLEH ARGUMEN YANG BERADA DI LUAR FUNCTION
+	(maksudnya nilai variable bool hanya berlaku di dalam blok if (i%2==0{}doang	|	*SEDANGKAN JIKA ARGUMEN CONSOLE.LOG DI DALAM FUNCTION NILAI VARIABLE YANG TERDAPAT DI DALAM FUNCTION ATAUPUN NILAI VARIABEL GLOBAL YANG TERLETAK DI LUAR FUNCTION DAPAT DIAKSES OLEH ARGUMEN TERSEBUT
+
+~ CONTOH NAME CONFLICT (NILAI VARIABEL YANG SAMA DI GLOBAL DAN DI LOCAL)
+	var a = 4;
+	function(){
+		var a = 4;
+		console.log(window.a);							|	WINDOW. DIGUNAKAN AGAR ARGUMEN DAPAT MEMANGGIL GLOBAL SCOPE YANG MEMILIKI VARIABLE YANG SAMA DENGAN VARIABEL LOCAL DI DALAM FUNCTION( VARIABLE YANG SAMA DINAMAKAN DENGAN NAME.CONFLICT)
+	}	
+~ JIKA VARIABEL GLOBAL ADA STATUS 1 : [console.log akan memanggil 3 pada local karena local tanpa var, sehingga melihat di dalam function ada var tidak jika tidak maka mengintip keluar dan melihat apa ada variable global dan nilai 3 menimpa nilai 4 pada variable global sehingga yang dipanggil adlah nilai 3] 
+			   STATUS 2 : [nilai var pada local akan menjadi nilai global karena nilai var global tidak ada.mengintip apa ada var didalam function jika tidak akan mengintip keluar apa ada var global jika tidak ada maka sistem akan membuat var global secara otomatis  (this case if you want make a variable local, you must add var to notice system that this is variable local)
+	*STATUS 1 :			|	*STATUS 2 :
+	var a = 4;			|	function tes(){						
+	function tes(){			|		a = 4;
+	a = 3;				|		}
+	}				|		console.log(a);
+	console.log(a);
+	*CONSOLE.LOG DILUAR FUNCTION HANYA DAPAT MEMAMNGGIL VARIABEL GLOBAL KECUALI NILAI VAR PADA LOCAL DIHAPUS INGAT TEKNIK INTIP MENGINTIP
+
+~ +KASUS MEMBERIKAN PARAMETER 		
+	var a = 3;			|	
+	function tes(a){		|		
+	console.log(a);			|	CONSOLE.LOG AKAN MEMANGGIL ANGKA 2 KARENA SUDAH DIBERIKAN PARAMETER
+	}				|
+	tes(2);				|
+	console.log(a);			|	CONSOLE.LOG AKAN MEMANGGIL ANGKA 3
+  +KASUS TES(2) MENJADI A
+	var a = 3;			|	variable global
+	function tes(a){		|	variable local	 
+	console.log(a);			|	variable local
+	}
+	tes(a);				|	variable global
+	console.log(a);			|	variable global
+	*KASUS INI TES A AKAN BERPEDONAN PADA CONSOLE.LOG GLOBAL BUKAN DI LOCAL KARENA TIDAK DIBERIKAN ARGUMEN NILAI SEHINGGA HASILNYA AKAN 3

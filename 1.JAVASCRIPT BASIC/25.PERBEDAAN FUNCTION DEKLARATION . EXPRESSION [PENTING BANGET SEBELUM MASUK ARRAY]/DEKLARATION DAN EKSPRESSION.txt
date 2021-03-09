@@ -1,0 +1,36 @@
+//PENULISAN FUNCTION ADA 2 DEKLARATION DAN EKSPRESSION//
+	*PENULISAN DEKLARATION					|		*PENULISAN EKSPRESSION [SEBENARNYA SAMA DENGAN PENULISAN EKSPRESSION HANYA PADA EKSPRESSION NAMA FUNCTION DAPAT DIHAPUS(TAMPIL PESAN)]
+  function indentidier (parameterList opt) { function body }	|	function identifie opt (parameterlist opt) { functionBody }
+								|	
+	function tampilpesan (nama) {				|	var tampilpesan = function (nama) {
+		alert('halo' + nama);				|			   alert('halo' + nama);
+	}							|			  }
+	*FUNCTION UNTUK MENAMPILKANN PESAN			|	*FUNCTION EKSPRESSION BIASANYA DISIMPAN KE DALAM SEBUAH VARIABLE
+
+~PERBEDAAN DEKLARATION DAN EKSPRESSION YANG LAIN ADALAH
+	*DEKLARATION [digawe buos]
+	 +Lebih Fleksibel(dapat ditulis dimanapun) dapat dipanggil dahulu atau dibuat terlebih dahulu
+	 +Mudah dipahami pemula
+	
+	~CONTOH DEKLARASI DULU :		|	~CONTOH DIPANGGIL DULU :		|
+	function tampilPesan (nama) {		|	 tampilPesan('Sandhika');		|
+		alert('halo' + nama);		|	 function tampilPesan (nama) {		|	TEKNIK FUNCTION DEKLARATION SEMUA DAPAT BERFUNGSI
+        	}				|		alert('halo' + nama);		|
+						|	 }					|
+       	tampilPesan('Sandhika');		|						|
+	
+	---------------------------------------------------------------------------------------------
+	
+	*EKSPRESSION FUNCTION
+	 +Harus didefinisikan terlebih dahulu sebelum dipanggil
+	 +Lebih powerfull :
+		@Sebagai closure
+		@Sebagai argumen untuk function lain
+		@IIFE(immediately Invoked Function Expression)
+	~CONTOH DEKLARASI DULU :			|	~CONTOH DIPANGGIL DULU :			|
+	 var tampilPesan = function (nama) {		|	 	tampilPesan('Sandhika');		|
+				alert('halo' + nama);	|	 var tampilPesan = function (nama) {		|
+			   }				|				alert('halo' + nama);	|	TEKNIK FUNCTION EXPRESSION BERFUNGSI HANYA SAAT DI DEKLARASI TERLEBIH DAHULU BARU DIPANGGIL
+		tampilPesan('Sandhika');		|			  }				|
+	 *INI DAPAT BERFUNGSI				|	*INI TIDAK DAPAT BERFUNGSI			|
+~LALU PILIH YANG MANA BISA PILIH KEDUANYA TAPI CATATAN FUNGSI EXPRESSION INI DIGUNAKAN UNTUK PEMROGRAMAN JAVASCRIPT YANG EXPERT SEPERTI PENGGUNAAAN JQUERY, UNTUK PEMULA DISARANKAN UNTUK MENGUASAI FUNCTION DEKLARATION TERLEBIH DAHULU SETELAH MENGUASAI BARU MENGGUNAKAN EXPRESSION

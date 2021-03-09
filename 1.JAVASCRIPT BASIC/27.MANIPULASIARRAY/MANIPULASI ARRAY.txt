@@ -1,0 +1,40 @@
+//MANIPULASI ARRAY CARA TRADISIONAL//
+  @ MENAMBAH ELEMEN PADA ARRAY:
+    var arr = ['satu','dua','tiga'];	|	var arr [];
+    console.log([1]);			|	var [1] = 'Orlando';
+					|	var [2] = 'Riski';
+					|	console.log(arr);	
+					|	*CARA INI AKAN SULIT JIKA KITA TIDAK TAHU ISI INDEXNYA JIKA URUTAN INDEX TIDAK URUT NILAI YG DILEWATI AKAN MENJADI UNDIFINED
+  @ MENGHAPUS ISI ARRAY:
+    var arr = ['Orlando','Riski','Hari'];	|	
+    arr[1] = undifined;				|	INDEX MANA YANG AKAN DIHAPUS DAN GUNAKAN SAMA DENGAN NAMA
+    console.log(arr);				|
+  @ MENAMPILKAN ISI ARRAY MENGGUNAKAN LOOPING FOR:
+    var arr = ['Orlando','Riski','Hari','Susanto'];	|	var arr = ['Orlando','Riski','Hari','Susanto','Seorang','Programmer','Handal','PSS'];
+							|	
+	for(var i = 0; i < 4; i++){			|	for(var i = 0; i < arr.length; i++) {							|	arr.length PERINTAH UNTUK JAVASCRIPT INDEX ADA BERAPA
+		console.log(i);				|		console.log('Mahasiswa ke- ' + (i+1) ': ' + arr[i]);
+	}						|	}
+
+//MANIPULASI ARRAY MENGGUNAKAN METHOD ARRAY JAVASCRIPT//
+	+LENGTH : MENGETAHUI BERAPA JUMLAH PADA ARRAY
+			CONTOH : SEPERTI YANG DIATAS YANG MENAMPILKAN ARRAY DENGAN LOOPING YANG BAGIAN arr.length
+	+JOIN	: MENGGABUNGKAN SELURUH ISI ARRAY DAN MENGUBAHNYA MENJADI SEBUAH STRING
+			CONTOH : var arr = ['Orlando','Riski','Hari'];			|	HASILNYA AKAN Orlando - Riski - Hari
+				 console.log(arr.join( - ));				|
+	+PUSH	: MENAMBAHKAN SEBUAH KATA PADA INDEX TERAKHIR SEBUAH ARRAY
+			CONTOH : var arr = ['Orlando','Riski','Hari'];			|	
+				 arr.push('Susanto');					|	HASILNYA AKAN Orlando Riski Hari Susanto
+				 console.log(arr.join());				|
+	+POP	: MENGHAPUS SEBUAH KATA PADA INDEX TERAKHIR SEBUAH ARRAY
+			CONTOH : var arr = ['Orlando','Riski','Hari','Susanto'];	|
+				 arr.pop();						|	HASILNYA AKAN Orlando Riski Hari
+				 console.log(arr.join());				|
+	+UNSHIFT: MENAMBAHKAN SEBUAH KATA PADA BAGIAN PERTAMA SEBUAH ARRAY
+			CONTOH : var arr = ['Orlando','Riski','Hari','Susanto'];	|
+				 arr.unshift('MAHASISWA');				|	HASILNYA AKAN Mahasiswa Orlando Riski Hari Susanto
+				 console.log(arr.join());				|	
+	+SHIFT  : MENGHAPUS SEBUAH KATA PADA BAGIAN PERTAMA SEBUAH ARRAY		
+			CONTOH : var arr = ['Orlando','Riski','Hari','Susanto'];	|
+				 arr.shift();						|	HASILNYA AKAN Riski Hari Susanto
+				 console.log(arr.join());				|

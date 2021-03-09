@@ -1,0 +1,86 @@
+//PARAMETER DAN ARGUMEN.(PARAMETER ADALAH VARIABEL YANG DITULIS DI DALAM KURUNG PADA SAAT FUNCTION DBUAT UNTUK MENAMPUNG NILAI SAAT FUNCION INI DIPANGGIL//
+			(ARGUMEN ADALAH NILAI YANG DI KIRIM KE PARAMETER)
+	CONTOH:
+		+PARAMETER	:	function tambah(a,b){		|	a dan b adalah parameter
+					 return a + b;
+					}
+		+ARGUMEN	:	var coba = tambah(5,10);	|	5 dan 10 adalah argument
+
+~CONTOH PENGGUNAAAN FUNCTION:	//membuat function//
+					function perhitunganJumlah(a,b){
+						return a + b;
+					}
+				//membuat argumen//
+					var a = 4;
+					var b = 5;
+					var hitung = perhitunganJumlah(a,b);
+					
+				//memanggil function//
+					console.log(hitung);
+
+*JIKA PARAMETER LEBIH BANYAK DARI ARGUMEN MAKA NILAI TERSEBUT AKAN UNDEFINE	|	*JIKA PARAMETER LEBIH SEDIKIT DARI ARGUMEN MAKA NILAI ARGUMEN TERSEBUT AKAN DIABAIKAN
+ CONTOH : function jumlah(a,b,c){						|	 CONTOH : function jumlah(a,b){
+		return a + b;							|			return a + b;
+	  }									|		   }
+	  console.log(jumlah(1,2));						|		  console.log(jumlah(1,3,4));
+
+~ARGUMENTS ADALAH VARIABEL[ARRAY YANG BERISI NILAI YG DIKIRIMKAN SAAT FUNGSI DIPANGGIL]*DIGUNAKAN APABILA NILAI ARGUMENT LEBIH BANYAK DARI PARAMETER TANPA HARUS MENAMBAHKAN PARAMETER YANG JUMLAH NYA SAMA DENGAN NILAI ARGUMEN
+ CONTOH : function tambah(){							|	* function ambil(){
+		return arguments;						|		var nilai = 0;
+	  }									|		for(i = 0; i < arguments.length; i++){
+		var ambil = tambah(1,2,3,'string', false);			|			nilai += arguments[i];
+		console.log(ambil);						|		} return nilai;
+										|	  }
+										|	  var hasil = ambil(1,2,3);
+										|	  console.log(hasil);
+// CONTOH 1
+        // // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI
+        // var a = 5;
+        // var b = 6;
+        // var hitung = perhitunganJumlah(a,b);
+        // // memanggil function
+        // console.log(hitung);
+
+//  CONTOH 2(MENAMBAHKAN FUNGSI PROMPT)*PARSEINT ADALAH NILAI YANG DIGUNAKAN UNTUK MENGGUNAKAN PROMPT AGAR DAPAT MENGGUNAKAN NILAI INTEGER
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // var hitung = perhitunganJumlah(a,b);
+        // // memanggil function
+        // console.log(hitung);
+
+//   CONTOH 3(MENAMBAHKAN FUNGSI PERKALIAN DI DALAM ARGUMEN)
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // var hitung = perhitunganJumlah(a * 2,b * 2);
+        // // memanggil function
+        // console.log(hitung);
+
+//   CONTOH 4(MENAMBAHKAN FUNGSI ADA 3 PERTAMA PERTAMABHAN YANG DIMASUKAN KE DALAM FUNGSI PERKALIAN)
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // function perhitunganKali(a,b) {
+        //     return a * b;
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // // var hitung = perhitunganKali(perhitunganJumlah(a,b),perhitunganJumlah(a,b));
+        // var hitung = perhitunganJumlah(perhitunganKali(a,b),perhitunganKali(a,b));
+        // // memanggil function
+        // console.log(hitung);

@@ -1,0 +1,49 @@
+//REKURSIF SEBUAH FUNGSI YANG MEMANGGIL DIRINYA SENDIRI.DEFINISI FUNGSI ADALAH INPUT YANG DIMASUKAN KE DALAM FUNCTION DAN MENGHASILKAN OUTPUT//
+//PASTIKAN PENGGUNAAN REKURSIF INI BERAKHIR KARENA SIFATNYA YANG MENGULANG ULANG SEPERTI LOOPING//
+~ SYNTAX SEDERHANA REKURSIF :	function tes(){		|	function melakukanRekursif(n){
+					return tes();	|		console.log(melakukanRekursif(n);
+					}		|		return melakukanRekursif(n-1);
+					tes();		|	}
+							|	melakukanRekursif(10);
+							|	*FUNGSI INI TIDAK AKAN BERHENTI DAN UNTUK MENGHENTIKAN NYA DENGAN MENGELUARKAN OUTPUT MAKA GUNAKAN BASE CASE
+
+~ BASECASE (KONDISI AKHIR REKURSIF MENGHASILKAN NILAI)ADA DI SCREEN SHOT
+  CONTOH SYNTAX :
+	function tes(n){
+		|----------------------|
+		|if ( n === 0 ) return;|	|	INI ADALAH BLOK CASE
+		|----------------------|
+	console.log(n);			
+	return tes(n-1);
+	}
+	tes(10); 
+
+~ REKURSIF PADA NILAI FAKTORIAL 5! ADA DI SCREENSHOOT:
+	+SYNTAX : function faktorial(n) {
+			if ( n === 0 ) return;
+			return n * faktorial ( n-1 );
+		}
+
+~ CATATAN SEMUA LOOPING BISA DIBUAT REKURSIFNYA TAPI TIDAK SEBALIKNYA.BERIKUT 2 CONTOH IMPLEMENTASI REKURSIF
+	LOOPING							REKURSIF
+  function cetakAngka(n) {			|	function cetakAngka(n) {
+	for( var i = n; i >= 1; i--) {		|		if( n === 0 ) return;
+		console.log(i);			|		console.log(n);
+	}					|		cetakAngka(n-1);
+  }						|	}
+	
+	LOOPING							REKURSIF			
+  function faktorial(n) {			|	function faktorial(n) {
+	var hasil = 1;				|		if (n === 0) return 1;
+	for ( var i = n; i > 0; i--){		|		return n * faktorial(n-1);
+		hasil *= i;			|	}
+	}
+	 return hasil;
+  }
+	*IMPLEMENTASI REKURSIF DAPAT DILAKUKAN UNTUK :
+		+MENGGANTIKAN LOOPING
+		+FIBONACCI
+		+PENCARIAN DAN PENELUSURAN PADA STRUKTUR DATA LIST DAN TREE
+		+BAHASA PEMROGRAMAN YANG TIDAK MEMILIKI PENGULANGAN
+			-HASKELL, ERLANG, PROLOG, DLL.
+		+DLL

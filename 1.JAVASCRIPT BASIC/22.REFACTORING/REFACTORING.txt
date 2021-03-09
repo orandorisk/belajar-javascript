@@ -1,0 +1,16 @@
+//REFACTORING ADALAH PROSES MENGUBAH KODE KITA MNJADI LEBIH BAIK LAGI, TANPA MENGUBAH FUNGSIONALITAS//
+//ALASAN PENGGUNAAN [READIBILITY(DIBACA MUDAH OLEH SENDIRI DAN ORANG LAIN).DRY DONT REPEAT YOURSELF.TESTABILITY.PERFORMANCE(SEPERTI SAAT PENGGUNAAN LOOPING).MAINTAINABILITY]
+
+~REFACTORING SEDERHANA CONTOH :
+~SEBELUM DI REFACTORING						|	SETELAH DI REFACTORING
+	function jumlahVolumeDuaKubus (a,b) {			|	function jumlahVolumeDuaKubus (a,b){
+								|		return a * a * a + b * b * b;
+		var total, volumeA, volumeB;			|	}
+		volumeA = a * a * a;				|	alert(jumlahVolumeDuaKubus(3,3);
+		volumeB = b * b * b;				|
+		total   = volumeA + volumeB;			|
+		return total;					|
+	}							|
+								|
+	+	alert(jumlahVolumeDuaKubus(9,2));		|
+	+	console.log(jumlahVolumeDuaKubus(29,44));	|

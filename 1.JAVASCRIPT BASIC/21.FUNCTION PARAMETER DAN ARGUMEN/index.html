@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARAMETER DAN ARGUMEN</title>
+    <script>
+        // CONTOH 1
+        // // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI
+        // var a = 5;
+        // var b = 6;
+        // var hitung = perhitunganJumlah(a,b);
+        // // memanggil function
+        // console.log(hitung);
+
+        //  CONTOH 2(MENAMBAHKAN FUNGSI PROMPT)
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // var hitung = perhitunganJumlah(a,b);
+        // // memanggil function
+        // console.log(hitung);
+
+        //   CONTOH 3(MENAMBAHKAN FUNGSI PERKALIAN DI DALAM ARGUMEN)
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // var hitung = perhitunganJumlah(a * 2,b * 2);
+        // // memanggil function
+        // console.log(hitung);
+
+        //   CONTOH 4(MENAMBAHKAN FUNGSI ADA 3 PERTAMA PERTAMABHAN YANG DIMASUKAN KE DALAM FUNGSI PERKALIAN)
+        // MEMBUAT SEBUAH FUNCTION
+        // function perhitunganJumlah(a,b) {
+        //     return a + b;            
+        // }
+        // function perhitunganKali(a,b) {
+        //     return a * b;
+        // }
+        // // MEMBUAT SEBUAH ARGUMEN YANG VARIABEL NILAI DITEMPATKAN DISINI(DAPAT DIGUNAKAN PULA PROMPT)
+        // var a = parseInt(prompt('Silahkan masukan nilai pertama: '));
+        // var b = parseInt(prompt('Silahkan masukan nilai kedua: '));
+        // // var hitung = perhitunganKali(perhitunganJumlah(a,b),perhitunganJumlah(a,b));
+        // var hitung = perhitunganJumlah(perhitunganKali(a,b),perhitunganKali(a,b));
+        // // memanggil function
+        // console.log(hitung);
+
+          
+        // function tambah(){							
+	    // return arguments;							
+        // }										
+	   	// var ambil = tambah(1,2,3,"string", false);		
+	    // console.log(ambil);								
+											 
+											 
+											 
+             function ambil(){
+                var nilai = 0;
+                 for(var i = 0; i < arguments.length; i++){
+                 nilai += arguments[i];
+                 } 
+                 return nilai;
+                } 
+                var hasil = ambil(1,2,3);
+                 console.log(hasil);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

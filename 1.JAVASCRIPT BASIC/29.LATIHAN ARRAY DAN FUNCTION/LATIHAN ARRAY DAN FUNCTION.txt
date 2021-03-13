@@ -1,0 +1,55 @@
+//MEMBUAT SEBUAH PROGRAM UNTUK MENGELOLA PENUMPANG ANGKOT DIMANA DIA NAIK ATAU TURUN ATAU TEMPAT DIA AKAN DUDUK//
+//REPRESENTASI TEMPAT DUDUK SEBUAH PROGRAM ADA DI SS//
+//VAR PENUMPANG = []
+//FUNGSIONALITAS UTAMA ADA DUA :
+	.. PENUMPANG NAIK DENGAN FUNCTION
+		~tambahpenumpang(): ADA DI SS TAMBAH PENUMPANG(MEMILIKI TES CASE): ADA DI SS UNTUK +TEST CASE 1 ADALAH KETIKA ANGKOT KOSONG DAN MULAI PENGISIAN PENUMPANG 	"DAPAT DILIHAT DI SCREENSHOOT"
+												   +TEST CASE 2 ADALAH KETIKA PENUMPANG TURUN DAN MEMILIKI KURSI KOSONG DAN PENUMPANG BARU HARUS MENGISI KURSI KOSONG TERSEBUT TERLEBIH DAHULU		"DAPAT DILIHAT DI SCREENSHOOT"
+												   +TEST CASE 3 ADALAH KETIKA ADA PENUMPANG DENGAN NAMA YANG SAMA DENGAN NAMA YANG ADA DI DALAM ANGKOT(*NANTI AKAN MEMBERIKAN INFO BAHWA SUDAH ADA NAMA YANG SMA)	"DAPAT DILIHAT DI SCREEN SHOOT"
+				  : MEMBUAT SYNTAX--> PESUDO CODE :						|	SYNTAX 
+				    var penumpang = [];								|	var penumpang = ['Orlando',undifined,'Riski'];
+				    var tambahPenumpang = function(namaPenumpang, penumpang){			|	var tambahPenumpang = function(namaPenumpang, penumpang) {
+					//jika angkot kosong							|		if(penumpang.length == 0){
+						//tambah penumpang di awal array				|			penumpang.push(namaPenumpang);
+						//kembalikan isi array & keluar dari function			|			return penumpang;
+					//else									|		}
+						//telusuri seluruh kursi dari awal				|		else{
+							//jika ada kursi kosong					|		for(var i =0; i < penumpang.length; i++){
+								//tambah penumpang di kursi kosong tersebut	|			if(penumpang[i] == undifined){
+								//kembalikan isi array & keluar dari function	|				penumpang[i] = namaPenumpang;
+							//jika sudah ada nama yang sama				|				return penumpang;
+								//tampilkan pesan kesalahannya			|			}
+								//kembalikan isi array & keluar dari function	|			else if(penumpang[i] == namaPenumpang{
+							//jika seluruh kursi terisi				|				console.log(namaPenumpang + 'Sudah ada di dalam angkot');
+								//tambah penumpang di akhir array		|				return penumpang;
+								//kembalikan isi array & keluar dari function	|			}
+														|			else if( i == penumpang.length -1){	
+						}								|				penumpang.push(namaPenumpang);
+														|				return penumpang;
+														|			}
+																      }
+																    }
+
+	..PENUMPANG TURUN DENGAN FUNCTION									
+		~hapusPenumpang(): ADA DI SS HAPUS PENUMPANG(MEMILIKI TES CASE): ADA DI SS UNTUK +TEST CASE 1 ADALAH KERIKA ANGKOT KOSONG DAN HAPUS SEORANG PENUMPANG MAKA MENAMPILKAN PESAN ANGKOT MASIH KOSONG	"DAPAT DILLIHAT DI SCREEN SHOOT"
+												 +TEST CASE 2 KETIKA ADA PENUMPANG DAN KITA INGIN MENURUNKAN PENUMPANG TERSEBUT DAN TAMPILKAN KURSI TERSEBUT MENJADI UNDIFINED		"DAPAT DILIHAT DI SCREENSHOOT"
+												 +TEST CASE 3 KALAU ADA PENUMPANG DI DALAM ANGKOT TAPI KITA NYURUH TURUN PENUMPANG YANG TIDAK ADA DIDALAM ANGKOT MAKA AKAN MENAMPILKAN PESAN BAHWA PENUMPANG TERSEBUT TIDAK ADA DI DALAM ANGKOT 	"DAPAT DILIHAT DI SCREEN SHOT"
+				: MEMBUAT SYNTAX--> PSEUDO CODE :						|	SYNTAX
+				  var hapusPenumpang = function(namaPenumpang, penumpang) {			|	var hapusPenumpang = function(namaPenumpang, penumpang) {
+					//jika angkot kosong							|		if(penumpang.length == 0) {
+						//tampilkan pesan bahwa angkot kosong, dan			|			console.log("angkot masih kosong");			
+						//tidak mungkin ada penumpang turun				|			console.log("tidak ada penumpang turun");
+						//kembalikan isi array & keluar dari function			|			return penumpang;
+					//else									|		}
+						//telusuri seluruh kursi dari awal				|		else{
+							//jika nama penumpang sesuai				|			for(var i = 0; i < penumpang.length; i++) {
+								//hapus penumpang dengan mengubah namanya	|				if(penumpang[i] == namaPenumpang) {				
+								//menjadi undifined				|					penumpang[i] = undifined;
+								//kembalikan isi array & keluar dari function	|					return penumpang;
+							//jika tidak ada nama yang sesuai			|				}else if(i == penumpang.length -1){
+								//tampilkan pesan kesalahannya			|					console.log(namaPenumpang + 'tidak ada di dalam angkot');
+								//kembalikan isi array & keluar dari function	|					return penumpang;
+						}								|		    		}
+														|		  	}
+																      }
+																    }

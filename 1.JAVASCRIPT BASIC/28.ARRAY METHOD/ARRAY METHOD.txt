@@ -1,0 +1,56 @@
+//ARRAY METHOD ADA LENGTH, JOIN, PUSH, POP, SHIFT, UNSHIFT//
+//KALI INI MEMBAHAS SLICE DAN SPLICE// 
+..SPLICE UNTUK MENYISIPKAN SEBUAH ARRAY DITENGAH TENGAH ARRAY.
+  SYNTAX SEDERHANA SPLICE :
+	splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...)	 |	var namaArr = ['Orlando','Riski','Hari','Susanto'];	|
+	*indexAwal (dimulai dari berapa, mauDihapus(hanya sebuah optional) dan   |	namaArr.splice(1, 2, 'Adalah','Susanto');		|	1 ADALAH MULAI INDEX DIMULAI DIMANA UNTUK DISISIPKAN , DAN 2 ADALAH BAGIAN INDEX YANG AKAN DIHAPUS KE KANAN SEBANYAK 2 KALI DAN ELEMEN YANG AKAN DITAMBAHKAN BERAPAPU AKAN MENGISI BAGIAN 2 INDEX TADI
+	 elemen baru satu dan dua adalah bagian yang akan ditambahkan		 |	console.log(namaArr.join(' - ');			|
+	
+..SLICE UNTUK MENGIRIS SEBUAH ARRAY MENJADI ARRAY YANG BARU
+  SYNTAX SEDERHANA SLICE :
+	slice(Indexawal,Indexakhir);						 |	var Arr = ['Walau','Lelah','Kami','Takkan','Menyerah'];	|
+	*Indexawal adalah mulai dari mana dan indexakhir adalah bagian yang akan |	var Arr1 = arr.slice(2,5);				|	2 ADALAH AWAL INDEX AKAN MELAKUKAN PERMULAAN DAN 5 ADALAH AKHIR DARI INDEX JADI YANG AKAN DITAMPILKAN MENJADI ARRAY BARU ADALAH INDEX 2,3,4
+	 ikut(jika satu dan dua maka indexakhir diisi 3)			 |	console.log(Arr1.join(' - ');				|
+	*SLICE MENGHASILKAN NILAI BARU MAKA BUAT VAR BARU			 |	*HASILNYA AKAN [KAMI TAKKAN MENYERAH]			|
+
+//KALI INI MEMBAHAS FOREACH DAN MAP(MELAKUKAN LOOPING PADA ARRAY TAPI LEBIH KEREN DARI FOR).SECARA UMUM MIRIP DENGAN FOR NAMUN LEBIH CANGGIH//
+..FOREACH UNTUK MENAMPILKAN PERULANGAN CARANYA PANGGIL DULU ARRAY NYA
+  SYNTAX SEDERHANA FOREACH :
+	nama.forEach(function(x){console.log(x)});				 |	var nama = [1,2,3,4,5,6,7,8];				|	var nama = [1,2,3,4,5,6,7,8];
+	*UNTUK TIAP" ELEMEN X PADA SETIAP ARRAY NAMA, SEBUAH FUNCTION YANG 	 |	nama.forEach(function(x){console.log(x)});		|	var nama= ['Orlando','Riski','Hari','Susanto'];
+	 MENAMPILKAN CONSOLE X							 |	*MENAMPILKAN URUTAN 1 SAMPAI DELAPAN TANPA MENGGUNAKAN 	|	nama.forEach(function(x,b){console.log('Mahasiswa No : '+ (b+1) + ' adalah ' + x)});
+										 |	 FOR 							|	*FOREACH JUGA DAPAT MENGGUNAKAN INDEX DENGAN CARA DIATAS
+..MAP LEBIH BAIK KARENA MENGEMBALIKAN ARRAY SEDANGKAN FOREACH TIDAK
+  SYNTAX SEDERHANA MAP :
+	var angka = [1,2,3,4,5,6,7,8];						 |
+	var angka2= angka.map(function(x){ return x * 2; });			 |	FUNCTION DIBUNGKUS KE DALAM VARIABLE, DAN 
+	console.log(angka2.join(' - '));					 |	DIPANGGIL DISINI GABUNGKAN MENGGUNAKAN JOIN
+	*SYNTAX DIATAS TIDAK AKAN BERJALAN JIKA MENGGUNAKAN FOREACH KARENA TIDAK |
+	 DAPAT MENGEMBALIKAN NILAI ARRAY					 |
+..SORT METHOD UNTUK  MENGURUTKAN SEBUAH NILAI
+  SYNTAX SEDERHANA SORT :
+	var angka = [1,2,4,3,6,5,7,9,10,8];					 |	NILAI 10 AKAN BERADA DI KANAN 1 UNTUK MEMBUAT DI AKHIR
+	angka.sort(function(a,b){						 |	GUNAKAN FUNCTION (A,B) DAN RETURN UNTUK MEMBUAT BILANGAN PULUHAN BERADA DI SEBELAH AKHIR BILANGAN SATUAN
+	return a-b;								 |
+	});									 |
+	console.log(angka.join(' - '));						 |
+
+//KALI INI MEMBAHAS FILTER DAN FIND METHOD (UNTUK MENCARI ELEMEN PADA ARRAY)
+..FILTER MENCARI ELEMEN DAN MENGEMBALIKAN BANYAK NILAI						|	
+  SYNTAX SEDERHANA FILTER : (mencari nilai pada array dan mengembalikannya dalam bentuk array	|
+	var angka = [1,2,10,5,20,3,6,8,4];							|	METHOD FILTER AKAN MENEMUKAN SEBUAH NILAI BERADA DI DALAM SEBUAH ARRAY
+	angka2 = angka.filter(function(x){							|	BUAT VAR BARU UNTUK MENAMPUNG NILAI FILTER , ARRAY SEBELUMNYA DIPANGGIL MENGGUNAKAN FILTER
+		return x > 5;									|	NILAI X YANG AKAN DICARI ADALAH ANGKA LEBIH DARI 5 MAKA 
+	});											|
+	console.log(angka2.join(' - '));							|	DAN PADA CONSOLE ANGKA DITAMPILKAN NILAI 7 - 6 - 8 - 9
+..FIND MENCARI ELEMEN DAN HANYA DAPAT MENEMUKAN SATU NILAI DAN PENGEMBALIAN BUKAN DALAM BENTUK ARRAY
+  SYNTAX SEDERHANA FIND : (find tidak dapat menggunakan method join karena hanya 1 nilai saja)
+	var angka = [1,2,10,5,20,3,6,8,4];								|	METHOD FIND AKAN MENEMUKAN SEBUAH NILAI BERADA DI DALAM SEBUAH ARRAY
+	angka2 = angka.find(function(x){								|	BUAT VAR BARU UNTUK MENAMPUNG FIND , ARRAY SEBELUMNYA DIPANGGIL MENGGUNAKAN FIND
+		return x == 4;										|	NILAI X YANG AKAN DICARI ADALAH ANGKA 5 MAKA
+	});												|
+	console.log(angka2);										| 	DAN PADA CONSOLE ANGKA DITAMPILKAN NILAI 5 * INGAT FIND HANYA DAPAT MENAMPILKAN SATU NILAI JIKA DIGUNAKAN JOIN MAKA AKAN ERROR
+
+//UNTUK MELIHAT LEBIH BANYAK FUNGSI SEBUAH METHOD DAPAT DILIHAT DI
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+	
